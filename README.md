@@ -2,6 +2,8 @@
 
 **Integrated Secure Data Erasure & Forensic Recovery Platform**
 
+![GUI Dashboard Screenshot](deck/assets/ui/dashboard.png)
+
 A single desktop tool that does three jobs that are normally three separate
 products:
 
