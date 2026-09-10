@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "Integrated Secure Data Erasure & Forensic Recovery Platform"
 readme = "README.md"
 requires-python = ">=3.11"
-authors = [{ name = "Team Sanchay", email = "team-sanchay@example.invalid" }]
+authors = [{ name = "Team Drishti", email = "kartikkashyapworks247@gmail.com" }]
 keywords = ["digital forensics", "data sanitization", "file carving", "NIST SP 800-88", "DFIR"]
 classifiers = [
     "Development Status :: 4 - Beta",

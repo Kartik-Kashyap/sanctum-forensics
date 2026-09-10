@@ -214,7 +214,7 @@ def run(argv: list[str] | None = None) -> int:
     app = QApplication(argv)
     app.setApplicationName(__product_name__)
     app.setApplicationVersion(__version__)
-    app.setOrganizationName("Team Sanchay")
+    app.setOrganizationName("Team Drishti")
     app.setStyleSheet(theme.STYLESHEET)
 
     window = MainWindow()

@@ -202,4 +202,6 @@ suite and the desktop interface are implemented. Build and test instructions are
 above; `python run.py --selftest` reports the actual state of the installation on
 your machine, which is the only claim about it worth trusting.
 
-Team Sanchay — Smart India Hackathon 2026.
+Regards,
+Kartik Kashyap (Primary Author)
+Team Drishti — Smart India Hackathon 2026.
