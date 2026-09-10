@@ -1,0 +1,150 @@
+{
+  "environment": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "machine": "AMD64",
+    "summary": {
+      "platform": "Windows-10-10.0.26200-SP0",
+      "system": "Windows",
+      "release": "10",
+      "machine": "AMD64",
+      "python": "3.11.9",
+      "elevated": false
+    },
+    "native_backend": {
+      "filesystem_parsing": false,
+      "encase_images": false,
+      "summary": "Native backend unavailable - using pure-Python carving. Install pytsk3 and pyewf for filesystem metadata recovery and E01 image support."
+    },
+    "storage": "C:\\"
+  },
+  "quick_mode": true,
+  "rows": [
+    {
+      "benchmark": "erase",
+      "subject": "zero1 @ 8 MB",
+      "metrics": {
+        "passes": 1,
+        "median_seconds": 0.03,
+        "median_mbps": 250.0,
+        "bytes_written": 8388608,
+        "repeats": 1
+      },
+      "notes": "Single Pass Zeros (1 pass)"
+    },
+    {
+      "benchmark": "erase",
+      "subject": "dod3 @ 8 MB",
+      "metrics": {
+        "passes": 3,
+        "median_seconds": 0.053,
+        "median_mbps": 510.6,
+        "bytes_written": 25165824,
+        "repeats": 1
+      },
+      "notes": "DoD 5220.22-M (3-pass) (3 pass)"
+    },
+    {
+      "benchmark": "erase",
+      "subject": "dod7 @ 8 MB",
+      "metrics": {
+        "passes": 7,
+        "median_seconds": 0.094,
+        "median_mbps": 717.9,
+        "bytes_written": 58720256,
+        "repeats": 1
+      },
+      "notes": "DoD 5220.22-M ECE (7-pass) (7 pass)"
+    },
+    {
+      "benchmark": "erase",
+      "subject": "gutmann @ 8 MB",
+      "metrics": {
+        "passes": 35,
+        "median_seconds": 0.386,
+        "median_mbps": 746.7,
+        "bytes_written": 293601280,
+        "repeats": 1
+      },
+      "notes": "Gutmann (35-pass) (35 pass)"
+    },
+    {
+      "benchmark": "verification",
+      "subject": "none @ 16 MB",
+      "metrics": {
+        "median_seconds": 0.041,
+        "overhead_vs_unverified": 1.0,
+        "bytes_read_back": 0
+      },
+      "notes": "no read-back"
+    },
+    {
+      "benchmark": "verification",
+      "subject": "sample @ 16 MB",
+      "metrics": {
+        "median_seconds": 0.063,
+        "overhead_vs_unverified": 1.53,
+        "bytes_read_back": null
+      },
+      "notes": "evenly-spread sample windows"
+    },
+    {
+      "benchmark": "verification",
+      "subject": "full @ 16 MB",
+      "metrics": {
+        "median_seconds": 0.044,
+        "overhead_vs_unverified": 1.06,
+        "bytes_read_back": 16777216
+      },
+      "notes": "every byte compared against the expected pattern"
+    },
+    {
+      "benchmark": "carve",
+      "subject": "deleted_files.img (16.00 MB)",
+      "metrics": {
+        "median_seconds": 0.479,
+        "median_mbps": 33.4,
+        "artefacts": 11,
+        "high_confidence": 9,
+        "planted_deleted": 10,
+        "recall": 0.9,
+        "precision": 1.0,
+        "peak_python_allocation_mb": 16.04,
+        "repeats": 1
+      },
+      "notes": "recall and precision are SHA-256 matches against the build manifest"
+    },
+    {
+      "benchmark": "carve-scaling",
+      "subject": "zero-filled image @ 32 MB",
+      "metrics": {
+        "seconds": 0.865,
+        "mbps": 37.0,
+        "peak_python_allocation_mb": 16.01
+      },
+      "notes": "peak allocation should stay flat as the image grows"
+    },
+    {
+      "benchmark": "carve-scaling",
+      "subject": "zero-filled image @ 128 MB",
+      "metrics": {
+        "seconds": 3.383,
+        "mbps": 37.8,
+        "peak_python_allocation_mb": 16.01
+      },
+      "notes": "peak allocation should stay flat as the image grows"
+    },
+    {
+      "benchmark": "file-erase",
+      "subject": "50 files @ 25.00 KB each",
+      "metrics": {
+        "median_seconds": 2.039,
+        "files_per_second": 24.5,
+        "mbps": 0.6,
+        "repeats": 1
+      },
+      "notes": "dod3, metadata cleansing on"
+    }
+  ]
+}

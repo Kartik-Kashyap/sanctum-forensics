@@ -1,0 +1,260 @@
+{
+  "environment": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "machine": "AMD64",
+    "summary": {
+      "platform": "Windows-10-10.0.26200-SP0",
+      "system": "Windows",
+      "release": "10",
+      "machine": "AMD64",
+      "python": "3.11.9",
+      "elevated": false
+    },
+    "native_backend": {
+      "filesystem_parsing": false,
+      "encase_images": false,
+      "summary": "Native backend unavailable - using pure-Python carving. Install pytsk3 and pyewf for filesystem metadata recovery and E01 image support."
+    },
+    "storage": "C:\\"
+  },
+  "quick_mode": false,
+  "rows": [
+    {
+      "benchmark": "erase",
+      "subject": "zero1 @ 16 MB",
+      "metrics": {
+        "passes": 1,
+        "median_seconds": 0.054,
+        "median_mbps": 340.4,
+        "bytes_written": 16777216,
+        "repeats": 3
+      },
+      "notes": "Single Pass Zeros (1 pass)"
+    },
+    {
+      "benchmark": "erase",
+      "subject": "dod3 @ 16 MB",
+      "metrics": {
+        "passes": 3,
+        "median_seconds": 0.103,
+        "median_mbps": 510.6,
+        "bytes_written": 50331648,
+        "repeats": 3
+      },
+      "notes": "DoD 5220.22-M (3-pass) (3 pass)"
+    },
+    {
+      "benchmark": "erase",
+      "subject": "dod7 @ 16 MB",
+      "metrics": {
+        "passes": 7,
+        "median_seconds": 0.216,
+        "median_mbps": 511.4,
+        "bytes_written": 117440512,
+        "repeats": 3
+      },
+      "notes": "DoD 5220.22-M ECE (7-pass) (7 pass)"
+    },
+    {
+      "benchmark": "erase",
+      "subject": "gutmann @ 16 MB",
+      "metrics": {
+        "passes": 35,
+        "median_seconds": 1.026,
+        "median_mbps": 551.2,
+        "bytes_written": 587202560,
+        "repeats": 3
+      },
+      "notes": "Gutmann (35-pass) (35 pass)"
+    },
+    {
+      "benchmark": "erase",
+      "subject": "zero1 @ 64 MB",
+      "metrics": {
+        "passes": 1,
+        "median_seconds": 0.122,
+        "median_mbps": 587.2,
+        "bytes_written": 67108864,
+        "repeats": 3
+      },
+      "notes": "Single Pass Zeros (1 pass)"
+    },
+    {
+      "benchmark": "erase",
+      "subject": "dod3 @ 64 MB",
+      "metrics": {
+        "passes": 3,
+        "median_seconds": 0.365,
+        "median_mbps": 558.1,
+        "bytes_written": 201326592,
+        "repeats": 3
+      },
+      "notes": "DoD 5220.22-M (3-pass) (3 pass)"
+    },
+    {
+      "benchmark": "erase",
+      "subject": "dod7 @ 64 MB",
+      "metrics": {
+        "passes": 7,
+        "median_seconds": 2.918,
+        "median_mbps": 156.7,
+        "bytes_written": 469762048,
+        "repeats": 3
+      },
+      "notes": "DoD 5220.22-M ECE (7-pass) (7 pass)"
+    },
+    {
+      "benchmark": "erase",
+      "subject": "gutmann @ 64 MB",
+      "metrics": {
+        "passes": 35,
+        "median_seconds": 3.951,
+        "median_mbps": 569.0,
+        "bytes_written": 2348810240,
+        "repeats": 3
+      },
+      "notes": "Gutmann (35-pass) (35 pass)"
+    },
+    {
+      "benchmark": "erase",
+      "subject": "zero1 @ 256 MB",
+      "metrics": {
+        "passes": 1,
+        "median_seconds": 0.441,
+        "median_mbps": 584.5,
+        "bytes_written": 268435456,
+        "repeats": 3
+      },
+      "notes": "Single Pass Zeros (1 pass)"
+    },
+    {
+      "benchmark": "erase",
+      "subject": "dod3 @ 256 MB",
+      "metrics": {
+        "passes": 3,
+        "median_seconds": 1.362,
+        "median_mbps": 571.4,
+        "bytes_written": 805306368,
+        "repeats": 3
+      },
+      "notes": "DoD 5220.22-M (3-pass) (3 pass)"
+    },
+    {
+      "benchmark": "erase",
+      "subject": "dod7 @ 256 MB",
+      "metrics": {
+        "passes": 7,
+        "median_seconds": 3.902,
+        "median_mbps": 460.5,
+        "bytes_written": 1879048192,
+        "repeats": 3
+      },
+      "notes": "DoD 5220.22-M ECE (7-pass) (7 pass)"
+    },
+    {
+      "benchmark": "erase",
+      "subject": "gutmann @ 256 MB",
+      "metrics": {
+        "passes": 35,
+        "median_seconds": 17.901,
+        "median_mbps": 500.4,
+        "bytes_written": 9395240960,
+        "repeats": 3
+      },
+      "notes": "Gutmann (35-pass) (35 pass)"
+    },
+    {
+      "benchmark": "verification",
+      "subject": "none @ 256 MB",
+      "metrics": {
+        "median_seconds": 0.445,
+        "overhead_vs_unverified": 1.0,
+        "bytes_read_back": 0,
+        "repeats": 7
+      },
+      "notes": "no read-back"
+    },
+    {
+      "benchmark": "verification",
+      "subject": "sample @ 256 MB",
+      "metrics": {
+        "median_seconds": 0.464,
+        "overhead_vs_unverified": 1.04,
+        "bytes_read_back": 67108864,
+        "repeats": 7
+      },
+      "notes": "evenly-spread sample windows"
+    },
+    {
+      "benchmark": "verification",
+      "subject": "full @ 256 MB",
+      "metrics": {
+        "median_seconds": 0.541,
+        "overhead_vs_unverified": 1.21,
+        "bytes_read_back": 268435456,
+        "repeats": 7
+      },
+      "notes": "every byte compared against the expected pattern"
+    },
+    {
+      "benchmark": "carve",
+      "subject": "deleted_files.img (16.00 MB)",
+      "metrics": {
+        "median_seconds": 0.478,
+        "median_mbps": 33.5,
+        "artefacts": 11,
+        "high_confidence": 9,
+        "planted_deleted": 10,
+        "recall": 0.9,
+        "precision": 1.0,
+        "peak_python_allocation_mb": 16.04,
+        "repeats": 3
+      },
+      "notes": "recall and precision are SHA-256 matches against the build manifest"
+    },
+    {
+      "benchmark": "carve-scaling",
+      "subject": "zero-filled image @ 32 MB",
+      "metrics": {
+        "seconds": 0.859,
+        "mbps": 37.2,
+        "peak_python_allocation_mb": 16.01
+      },
+      "notes": "peak allocation should stay flat as the image grows"
+    },
+    {
+      "benchmark": "carve-scaling",
+      "subject": "zero-filled image @ 128 MB",
+      "metrics": {
+        "seconds": 3.397,
+        "mbps": 37.7,
+        "peak_python_allocation_mb": 16.01
+      },
+      "notes": "peak allocation should stay flat as the image grows"
+    },
+    {
+      "benchmark": "file-erase",
+      "subject": "100 files @ 25.00 KB each",
+      "metrics": {
+        "median_seconds": 4.142,
+        "files_per_second": 24.1,
+        "mbps": 0.6,
+        "repeats": 3
+      },
+      "notes": "dod3, metadata cleansing on"
+    },
+    {
+      "benchmark": "file-erase",
+      "subject": "1000 files @ 25.00 KB each",
+      "metrics": {
+        "median_seconds": 46.306,
+        "files_per_second": 21.6,
+        "mbps": 0.5,
+        "repeats": 3
+      },
+      "notes": "dod3, metadata cleansing on"
+    }
+  ]
+}

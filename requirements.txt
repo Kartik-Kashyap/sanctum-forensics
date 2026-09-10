@@ -1,0 +1,32 @@
+# SANCTUM - dependency manifest
+#
+# The three engines, the audit chain and the report writer have NO third-party
+# dependencies. That is a deliberate design constraint: the tool must run on any
+# machine it is demonstrated on, and a forensic tool whose core depends on a
+# package that fails to build on the examiner's workstation is not a tool.
+#
+# Everything below is optional and degrades cleanly when absent.
+
+# --- desktop interface ----------------------------------------------------
+# Required only for the GUI. Without it, `python run.py --selftest` and the
+# whole engine still work.
+PyQt6>=6.6
+
+# --- native forensic backend ----------------------------------------------
+# Enables filesystem-aware recovery: enumerating deleted entries with their
+# original names and timestamps, and restricting a scan to unallocated space.
+# Without it, SANCTUM falls back to pure-Python signature carving, which works
+# from content alone and is blind to filesystem metadata.
+#
+# These build from source on some platforms. They are commented out so a plain
+# `pip install -r requirements.txt` never fails on a machine that cannot build
+# them - install them explicitly where you want the extra capability:
+#
+#   pip install pytsk3 pyewf
+#
+# pytsk3>=20230125
+# pyewf>=20171104
+
+# --- development ----------------------------------------------------------
+# Only needed to run the test suite.
+pytest>=7.4
